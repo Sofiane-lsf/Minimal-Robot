@@ -1,0 +1,280 @@
+/*
+Style du reset 
+*/
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+*{
+    margin: 0;
+    padding: 0;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+body{
+    font-size: 1.5rem; /* =>15px */
+    background-color: #131313;
+    color: white;
+    font-family: 'Times', serif;
+
+    /*Gestion de l'image de fond*/
+    background-image: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-align: center;
+}
+
+h1,h2,h3{
+    font-family: 'Arial', sans-serif;
+}
+
+h1, h2{
+    text-transform: uppercase;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+img{
+    max-width: 100%;
+}
+
+/*
+Style header
+*/
+
+
+
+header img{
+    width: 5rem;
+}
+
+ul{
+    list-style: none;
+}
+
+/* fiier la nav en haut à droite */
+nav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 4rem;
+    background-color: #131313;
+    height: 100vh;
+    border-left: .1rem solid #434343;
+    color: #9c9c9c;
+    right: -25rem;
+
+    -webkit-transition: right .5s;
+    transition: right .5s;
+}
+
+nav.open{
+    right: 0;
+}
+
+li{
+    margin-bottom: 1rem;
+}
+
+nav li:first-child{
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+}
+
+nav li:last-child{
+    margin-top: 3rem;
+}
+
+header section{
+    max-width: 90rem;
+    margin: auto;
+    height: 100vh;
+
+    /* bloquer les enfants dans le parent */
+    position: relative;
+}
+
+header section a:first-of-type{
+    position: absolute;
+    top: 2rem;
+    left: 0;
+}
+
+header section a:last-of-type{
+    font-size: 3rem;
+    color: #bababa;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1rem 1.5rem;
+
+    position: absolute;
+    top: 2rem;
+    right: 0;
+
+}
+
+h1{
+    font-size: 6rem;
+    font-weight: 900;
+    line-height: 1;
+    width: 100%;
+    max-width: 50rem; 
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+
+    -webkit-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
+
+}
+
+h1 span{
+    font-family: 'Times', serif; 
+    font-weight: 100; 
+    font-size: 2.5rem; 
+    display: block;
+}
+
+
+
+/*
+Style main
+*/
+
+section{
+    padding: 10rem 0;
+}
+h2{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+main ul{
+    max-width: 35rem;
+    margin: 0 auto 2rem auto;
+
+    
+}
+
+main{
+    max-width: 90rem; 
+    margin: auto;
+}
+
+main article{
+    display: -webkit-flex;
+    display: flex;
+    
+
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    flex-wrap: wrap;"
+    
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    justify-content: space-between;
+
+}
+
+figure{
+    width: 30%;
+    cursor: pointer;
+    margin-bottom: 3rem;
+
+    position: relative;
+}
+
+figcaption{
+    font-size: 2rem;
+    background: rgba(19, 19, 19, 0.5);
+    padding: 2rem;
+    width: 60%;
+
+    opacity: 0;
+
+    position: absolute;
+    top:50%;
+    left: 50%;
+    margin-top: -2;
+
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    -webkit-transition: opacity .5s ;
+    transition: opacity .5s ;
+}
+
+figure:hover figcaption{
+    opacity: 1;
+    margin-top: 0;
+
+}
+
+figcaption span{
+    display: block;
+    background: #131313;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+}
+
+
+h3{
+    font-size: 3.5rem; 
+    color: #eea136;
+    margin: 6rem auto 1rem auto;
+}
+
+input, textarea, button{
+    display: block; 
+    width: 100%; 
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+textarea{
+    min-height: 20rem;
+}
+
+form{
+    max-width: 40rem;
+    margin: auto;
+}
+
+.callToAction{
+    background-color: #eea136;
+    font-size: 1.7rem;
+    font-weight: 500;
+    border:none;
+    border-bottom: .5rem solid #9d6924;
+    padding: 1rem;
+    color: #131313;
+    
+    -webkit-transition: opacity .5s ;
+    transition: all .5s;
+    
+}
+
+.callToAction:hover{
+    background-color: white;
+    border-color: white;
+}
+
+footer{
+    opacity: .7;
+    padding: 2rem;
+}
